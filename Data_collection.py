@@ -22,7 +22,7 @@ for Train_no in Train_data:
 				current_date=start_date+timedelta(days=i)
 				date=current_date.strftime("%Y-%m-%d")
 				found=False
-				url="https://api.worldweatheronline.com/premium/v1/past-weather.ashx"
+				url="<<Weather API URL>>"
 				response=requests.get(url,params={"key":API_KEY,"q":ci,"date":date,"tp":1,"format":"json"},timeout=10)
 				response.raise_for_status()
 				data = response.json()
